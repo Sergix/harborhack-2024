@@ -18,7 +18,7 @@ import {
     SelectValue,
   } from "@/components/ui/select"
 import { useState } from "react"
-import NavBar from "./components/ui/NavBar"
+import NavBar from "./components/Navigation/NavBar"
 
 const submitFormSchema = z.object({
     location: z.string(),

@@ -2,7 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import NavBar from "./components/ui/NavBar";
+import NavBar from "./components/Navigation/NavBar";
+import RequestCard from "./components/RequestCard";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -10,6 +11,7 @@ function App() {
 	return (
     <>
     <NavBar />
+    <RequestCard/>
     <p>Homepage</p>
   </>
 	);
