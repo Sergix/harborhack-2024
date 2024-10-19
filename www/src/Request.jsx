@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import { Form, FormControl, FormLabel, FormDescription, FormItem, FormField } from '@/components/ui/form'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import NavBar from "./components/ui/NavBar"
 
 const submitFormSchema = z.object({
     test: z.string()
@@ -25,6 +26,7 @@ export default function Submit() {
 
     return (
         <>
+            <NavBar />
             <div>
                 <h1>Request Help</h1>
             </div>

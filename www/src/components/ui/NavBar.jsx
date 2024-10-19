@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 import {
@@ -14,21 +15,27 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export default function NavBar() {
+	// const navigate = useNavigate();
+	const navigate = useNavigate();
+	const test = "asdf";
+
 	return (
-		<NavigationMenu class="">
-            <NavigationMenuList>
-			<NavigationMenuItem>
-				<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-					Home
-				</NavigationMenuLink>
-			</NavigationMenuItem>
-            <NavigationMenuItem>
-				<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-					Help
-				</NavigationMenuLink>
-			</NavigationMenuItem>
-            </NavigationMenuList>
-		</NavigationMenu>
+		//colors tbd
+		<header class="w-screen h-16 bg-secondary fixed justify-center content-center top-0 z-50 p-2">
+			<NavigationMenu class="">
+				<NavigationMenuList>
+					<NavigationMenuItem onClick={()=>navigate("/")}>
+						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+							Home
+						</NavigationMenuLink>
+					</NavigationMenuItem>
+					<NavigationMenuItem onClick={()=>navigate("/request")}>
+						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+							Request
+						</NavigationMenuLink>
+					</NavigationMenuItem>
+				</NavigationMenuList>
+			</NavigationMenu>
+		</header>
 	);
 }
-

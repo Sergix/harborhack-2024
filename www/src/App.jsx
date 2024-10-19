@@ -8,13 +8,10 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<div>
-			<header class="sticky top-0 z-50">
-				<NavBar />
-			</header>
-
-			<div style={{ width: "500px", height: "1000px", background: "blue" }} />
-		</div>
+    <>
+    <NavBar />
+    <p>Homepage</p>
+  </>
 	);
 }
 
