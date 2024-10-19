@@ -1,17 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import NavBar from "./components/ui/NavBar";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
     <>
-    <NavBar />
-    <p>Homepage</p>
-  </>
+      <NavBar />
+      <main className='p-4'>
+        <h1>Browse</h1>
+        
+      </main>
+    </>
 	);
 }
 

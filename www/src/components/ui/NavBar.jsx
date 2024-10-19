@@ -24,6 +24,7 @@ export default function NavBar() {
 		<header class="w-screen h-16 bg-secondary fixed justify-center content-center top-0 z-50 p-2">
 			<NavigationMenu class="">
 				<NavigationMenuList>
+					<img className="w-32 mr-auto" src='/logo.png'></img>
 					<NavigationMenuItem onClick={()=>navigate("/")}>
 						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
 							Home

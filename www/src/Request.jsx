@@ -57,6 +57,7 @@ export default function Submit() {
     return (
         <>
             <NavBar />
+            <main className='px-4 mt-24 mb-8'>
             <h1>Request Help</h1>
             <ProfileOverview/>
             <Form {...form}>
@@ -159,6 +160,7 @@ export default function Submit() {
                     <Button type='submit'>Submit</Button>
                 </form>
             </Form>
+            </main>
         </>
     )
 }
