@@ -5,7 +5,6 @@ import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { Form, FormControl, FormLabel, FormDescription, FormItem, FormField } from '@/components/ui/form'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Slider } from "@/components/ui/slider"
 import { ProfileOverview } from '@/components/profile-overview'
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
@@ -76,7 +75,7 @@ export default function Submit() {
                                     <SelectItem value="gps">Current GPS location</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <p className='text-xs rounded-xl bg-sky-400 text-white p-4'>{location}</p>
+                            <p className='text-xs rounded-xl bg-neutral-400 text-white p-4'>{location}</p>
                         </FormItem>
                     )}></FormField>
                     <hr/>
