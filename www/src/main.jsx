@@ -7,7 +7,7 @@ import './index.css'
 /* pages */
 import App from './App.jsx'
 import Request from './Request.jsx'
-import MapPage from './MapPage.jsx'
+import MapPage from './MapPage/index.jsx'
 
 /* routing */
 import {
