@@ -18,6 +18,7 @@ import {
     SelectValue,
   } from "@/components/ui/select"
 import { useState } from "react"
+import NavBar from "./components/ui/NavBar"
 
 const submitFormSchema = z.object({
     location: z.string(),
@@ -55,6 +56,7 @@ export default function Submit() {
 
     return (
         <>
+            <NavBar />
             <h1>Request Help</h1>
             <ProfileOverview/>
             <Form {...form}>
