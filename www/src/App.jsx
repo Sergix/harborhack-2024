@@ -1,5 +1,6 @@
 import "./App.css";
-import NavBar from "./components/ui/NavBar";
+import NavBar from "./components/Navigation/NavBar";
+import RequestCard from "./components/RequestCard";
 
 function App() {
 	return (
