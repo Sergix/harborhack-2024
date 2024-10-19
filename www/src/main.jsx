@@ -7,6 +7,7 @@ import './index.css'
 /* pages */
 import App from './App.jsx'
 import Request from './Request.jsx'
+import MapPage from './MapPage.jsx'
 
 /* routing */
 import {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   { 
     path: '/request',
     element: <Request />
+  },
+  { 
+    path: '/map',
+    element: <MapPage />
   }
 ])
 

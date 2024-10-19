@@ -34,6 +34,11 @@ export default function NavBar() {
 							Request
 						</NavigationMenuLink>
 					</NavigationMenuItem>
+					<NavigationMenuItem onClick={()=>navigate("/map")}>
+						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+							Map
+						</NavigationMenuLink>
+					</NavigationMenuItem>
 				</NavigationMenuList>
 			</NavigationMenu>
 		</header>

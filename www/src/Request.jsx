@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { Form, FormControl, FormLabel, FormDescription, FormItem, FormField } from '@/components/ui/form'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import NavBar from "./components/ui/NavBar"
+import NavBar from "./components/Navigation/NavBar"
 
 const submitFormSchema = z.object({
     test: z.string()
