@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function MapPage() {
 	const [showCard, setShowCard] = useState(false);
-	const [requestId, setRequestId] = useState(1);
+	const [requestId, setRequestId] = useState(0);
 	const [maxDistance, setMaxDistance] = useState(10);
 	const [requestList, setRequestList] = useState([]);
 	const handleClick = (id) => {
@@ -33,7 +33,7 @@ export default function MapPage() {
 					maxDistance={maxDistance}
 				/>
 				{(showCard && requestList.length > 0) && (
-					<div class="absolute bottom-6 bg-white">
+					<div class="absolute bottom-6 bg-white w-4/5">
 						{requestList[requestId]}
 					</div>
 				)}

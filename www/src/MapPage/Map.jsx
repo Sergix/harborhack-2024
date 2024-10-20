@@ -28,7 +28,7 @@ export default function MapPiece({ setRequestId, maxDistance}) {
         [32.878, -79.89],
 	];
 
-	const requestIds = Array.from({ length: locations.length }, (_, i) => i + 1);
+	const requestIds = Array.from({ length: locations.length }, (_, i) => i );
 
     
 	const marks = locations
@@ -36,6 +36,7 @@ export default function MapPiece({ setRequestId, maxDistance}) {
 		.map((loc) => {
 			return (
 				<Marker
+                    id={locations.indexOf(loc)}
 					anchor={loc}
 					onClick={() => {
 						setRequestId(requestIds[locations.indexOf(loc)]);
