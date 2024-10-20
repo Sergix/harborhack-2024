@@ -2,6 +2,7 @@ import NavBar from "../components/Navigation/NavBar";
 import MapPiece from "./Map";
 import RequestCard from "../components/RequestCard";
 import Menu from "./menu";
+import { useState } from 'react';
 
 export default function MapPage() {
 	const [showCard, setShowCard] = useState(false);

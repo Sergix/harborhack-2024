@@ -22,7 +22,7 @@ export default function NavBar({ page }) {
 
 	return (
 		//colors tbd
-		<header className="w-full fixed top-0 z-50 ">
+		<header className="w-full fixed top-0 z-50 max-w-sm">
 			<div className='m-2 shadow-xl px-3 py-2 rounded-full bg-neutral-200 justify-center content-center acrylic'>
 			<NavigationMenu className='mx-auto'>
 				<NavigationMenuList>
