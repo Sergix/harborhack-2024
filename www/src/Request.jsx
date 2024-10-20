@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Slider } from "@/components/ui/slider"
 import { ProfileOverview } from '@/components/profile-overview'
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { Input } from '@/components/ui/input'
 
 import {
     Select,
@@ -154,6 +155,12 @@ export default function Submit() {
                         <h2>How urgent is your request?</h2>
                         <p className='text-sm text-neutral-500'>From <i className="font-extralight">no rush</i> to <i className="font-extrabold">ASAP</i></p>
                         <Slider defaultValue={[25]} max={100} step={25} />
+                    </div>
+
+                    <div className='space-y-4'>
+                        <h2>Do you have a picture?</h2>
+                        <p className='text-sm text-neutral-500'>You're more likely to receive help if people can see it for themselves.</p>
+                        <Input type='file'/>
                     </div>
 
                     <Button type='submit'>Submit</Button>

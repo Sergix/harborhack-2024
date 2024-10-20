@@ -36,6 +36,6 @@ export default function MapPiece(){
 
 const HeatPiece = () => {
 	return (
-		<div class={`bg-red-700 bg-opacity-40 rounded-xl w-[1.5rem] h-[1.5rem] relative top-[1rem] left-[0.2rem]`}></div>
+		<div className={`bg-red-700 bg-opacity-40 rounded-xl w-[1.5rem] h-[1.5rem] relative top-[1rem] left-[0.2rem]`}></div>
 	);
 };
