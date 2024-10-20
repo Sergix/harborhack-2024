@@ -68,7 +68,7 @@ function App() {
 	return (
     <>
       <NavBar />
-      <main className='px-4 mt-24 mb-8 space-y-2'>
+      <main className='px-4 mt-24 mb-8 space-y-2 phone-size'>
         <Tabs defaultValue="help">
           <TabsList className='w-full'>
             <TabsTrigger className='w-full' value="help">I want to help</TabsTrigger>

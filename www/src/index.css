@@ -19,12 +19,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  max-width: 384px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -74,6 +68,12 @@ h1 {
   background: rgba(200,200,200,0.4) !important;
   -webkit-backdrop-filter: blur(10px) !important; 
   backdrop-filter: blur(10px) !important;
+}
+
+.phone-size {
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (prefers-color-scheme: light) {
