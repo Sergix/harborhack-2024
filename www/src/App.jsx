@@ -99,7 +99,7 @@ function App() {
             <RequestCardList progress={progress} isLoaded={loaded}/>
           </TabsContent>
           <TabsContent value="request">
-            <p className='text-xs text-neutral-700 -mt-2 mb-4 pt-2 pb-3 px-3 bg-neutral-100 rounded-b-lg'>Find help in your situation</p>
+            <p className='text-xs text-neutral-700 -mt-4 mb-4 pt-4 pb-3 px-3 bg-neutral-100 rounded-b-lg'>Find help in your situation</p>
             <p className='text-xs text-neutral-400 m-2'>All helpers have been individually vetted using federal identification.</p>
             <HelperCardList progress={progress} isLoaded={loaded}/>
           </TabsContent>
