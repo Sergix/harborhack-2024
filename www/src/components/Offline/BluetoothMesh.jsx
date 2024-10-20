@@ -13,7 +13,7 @@ export default function BlueToothMesh() {
 			<p className="text-xs">Searching for bluetooth mesh network...</p>
 			<p className='text-xs font-mono mt-2'>
 				DEVICE ID SLIDAq6Hs2!a_5<br/>
-				LATLONG 27.1231/29.12312
+				LATLONG 35.54042144415137, -79.7480894614109<br/>
 				AJLRP
 			</p>
 		</div>
