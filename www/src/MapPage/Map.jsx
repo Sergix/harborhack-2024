@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Map, Marker, Overlay } from "pigeon-maps";
+import key from "./map_api_key";
 
 export default function MapPiece({ setRequestId, maxDistance}) {
 	const [center, setCenter] = useState([32.78, -79.93]);
 	const [zoom, setZoom] = useState(11);
+
 
 	//set your current location
 	const [currentLocation, setCurrentLocation] = useState(null);
@@ -13,20 +15,20 @@ export default function MapPiece({ setRequestId, maxDistance}) {
    
 
 	const locations = [
-		[32.768, -79.93],
+		// [32.768, -79.93],
 		[32.778, -79.95],
-		[32.788, -79.91],
-        [32.798, -79.95],
+		// [32.788, -79.91],
+        // [32.798, -79.95],
         [32.808, -79.81],
-        [32.818, -79.95],
-        [32.828, -79.91],
+        // [32.818, -79.95],
+        // [32.828, -79.91],
         [32.828, -79.99],
         [32.798, -79.93],
-        [32.878, -79.75],
+        // [32.878, -79.75],
         [32.878, -79.89],
 	];
 
-	const requestIds = Array.from({ length: locations.length }, (_, i) => i + 1);
+	const requestIds = Array.from({ length: locations.length }, (_, i) => i );
 
     
 	const marks = locations
@@ -34,6 +36,7 @@ export default function MapPiece({ setRequestId, maxDistance}) {
 		.map((loc) => {
 			return (
 				<Marker
+                    id={locations.indexOf(loc)}
 					anchor={loc}
 					onClick={() => {
 						setRequestId(requestIds[locations.indexOf(loc)]);
@@ -44,9 +47,17 @@ export default function MapPiece({ setRequestId, maxDistance}) {
 				</Marker>
 			);
 		});
+
+
+        const MAPTILER_ACCESS_TOKEN = key;
+        const MAP_ID = 'streets-v2'
+        function mapTiler (x, y, z, dpr) {
+            return `https://api.maptiler.com/maps/${MAP_ID}/256/${z}/${x}/${y}${dpr >= 2 ? '@2x' : ''}.png?key=${MAPTILER_ACCESS_TOKEN}`
+          }
 	return (
 		<div class="w-full h-full">
 			<Map
+                provider={mapTiler}
 				defaultCenter={center}
 				defaultZoom={zoom}
 				onBoundsChanged={({ center, zoom }) => {
