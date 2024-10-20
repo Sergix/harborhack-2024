@@ -7,10 +7,12 @@ import { Button } from '@/components/ui/button'
 function ButtonOrComplete({completed}) {
     if (!completed) {
         return (
-            <Button className='my-2 bg-emerald-500 hover:bg-emerald-600'>Help</Button>
+            <Button className='my-2 border-emerald-500 bg-white border text-emerald-600 hover:text-white hover:bg-emerald-600'>Connect</Button>
         )
     }
-    return null
+    return (
+        <Button className='my-2 bg-neutral-700 hover:bg-emerald-600' disabled>Helped</Button>
+    )
 }
 
 function IfImage({src}) {
@@ -67,7 +69,7 @@ export default function RequestCard({title, type, distance, urgent, features, co
     }
 
     return (   
-        <div className={"rounded-sm shadow-md pt-2 px-2 pb-4 w-full border border-slate-300 flex flex-row  " + getTypeStyles()}>
+        <div className={"rounded-sm shadow-inner pt-2 px-2 pb-4 w-full border border-slate-100 flex flex-row  " + getTypeStyles()}>
             <div>
                 <div className='flex flex-row align-middle ml-1'>
                     <img width='32' height='32' src={`/${type}.png`} alt={type}/>

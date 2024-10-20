@@ -69,12 +69,21 @@ function App() {
     <>
       <NavBar />
       <main className='px-4 mt-24 mb-8 space-y-2 phone-size'>
+        <aside className='flex flex-col bg-red-600 p-2 rounded-md text-white shadow-md'>
+          <div className='flex flex-row align-middle'>
+            <img width='16' height='24' className="mt-1 self-start" src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/White_alert_icon.svg/1280px-White_alert_icon.svg.png'></img>
+            <h2 className='text-sm font-bold ml-1'>LOCAL EMERGENCY</h2>
+          </div>
+          <p className='text-sm'>Local flooding within 25 miles of your current location. May be damaging to costal homes.</p>
+          <p className='text-sm font-bold mt-2'>Find an evacuation route &gt;</p>
+        </aside>
         <Tabs defaultValue="help">
           <TabsList className='w-full'>
             <TabsTrigger className='w-full' value="help">I want to help</TabsTrigger>
             <TabsTrigger className='w-full' value="request">I need help</TabsTrigger>
           </TabsList>
           <TabsContent value="help">
+              <p className='text-xs text-neutral-700 -mt-4 mb-4 pt-4 pb-3 px-3 bg-neutral-100 rounded-b-lg'>Help people in your community</p>
               <Select>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Apply a filter" />
@@ -90,6 +99,7 @@ function App() {
             <RequestCardList progress={progress} isLoaded={loaded}/>
           </TabsContent>
           <TabsContent value="request">
+            <p className='text-xs text-neutral-700 -mt-2 mb-4 pt-2 pb-3 px-3 bg-neutral-100 rounded-b-lg'>Find help in your situation</p>
             <p className='text-xs text-neutral-400 m-2'>All helpers have been individually vetted using federal identification.</p>
             <HelperCardList progress={progress} isLoaded={loaded}/>
           </TabsContent>
