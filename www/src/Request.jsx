@@ -57,7 +57,7 @@ export default function Submit() {
     return (
         <>
             <NavBar />
-            <main className='px-4 mt-24 mb-8'>
+            <main className='px-4 mt-24 mb-8 phone-size'>
             <h1>Request Help</h1>
             <ProfileOverview/>
             <Form {...form}>
