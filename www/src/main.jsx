@@ -6,6 +6,7 @@ import './index.css'
 
 /* pages */
 import App from './App.jsx'
+import Offline from './Offline.jsx'
 import Request from './Request.jsx'
 import MapPage from './MapPage/index.jsx'
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   { 
     path: '/map',
     element: <MapPage />
+  },
+  {
+    path: '/offline',
+    element: <Offline />
   }
 ])
 

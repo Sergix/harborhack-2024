@@ -5,10 +5,10 @@ import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { Form, FormControl, FormLabel, FormDescription, FormItem, FormField } from '@/components/ui/form'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Slider } from "@/components/ui/slider"
 import { ProfileOverview } from '@/components/profile-overview'
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { Input } from '@/components/ui/input'
 
 import {
     Select,
@@ -57,6 +57,7 @@ export default function Submit() {
     return (
         <>
             <NavBar />
+            <main className='px-4 mt-24 mb-8'>
             <h1>Request Help</h1>
             <ProfileOverview/>
             <Form {...form}>
@@ -75,7 +76,7 @@ export default function Submit() {
                                     <SelectItem value="gps">Current GPS location</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <p className='text-xs rounded-xl bg-sky-400 text-white p-4'>{location}</p>
+                            <p className='text-xs rounded-xl bg-neutral-400 text-white p-4'>{location}</p>
                         </FormItem>
                     )}></FormField>
                     <hr/>
@@ -156,9 +157,16 @@ export default function Submit() {
                         <Slider defaultValue={[25]} max={100} step={25} />
                     </div>
 
+                    <div className='space-y-4'>
+                        <h2>Do you have a picture?</h2>
+                        <p className='text-sm text-neutral-500'>You're more likely to receive help if people can see it for themselves.</p>
+                        <Input type='file'/>
+                    </div>
+
                     <Button type='submit'>Submit</Button>
                 </form>
             </Form>
+            </main>
         </>
     )
 }

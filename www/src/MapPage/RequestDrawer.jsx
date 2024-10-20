@@ -16,7 +16,7 @@ export default function RequestDrawer(){
 		<Drawer>
 			<DrawerTrigger class="bg-sky-100 rounded-lg p-2">See Requests</DrawerTrigger>
 			<DrawerContent>
-				<div class="h-[90vh]">
+				<div className="h-[90vh]">
 					<DrawerHeader>
 						<DrawerTitle>See Local Requests</DrawerTitle>
 						<DrawerDescription>New requests will appear here</DrawerDescription>
