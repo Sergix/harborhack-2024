@@ -19,7 +19,7 @@ export default function Menu({ maxDistance, setMaxDistance }) {
 			</PopoverTrigger>
 			<PopoverContent>
 				<div class="flex p-1">
-					<p class="mb-2">MaxDistance: {maxDistance}</p>
+					<p class="mb-2">MaxDistance: {maxDistance} miles</p>
 				</div>
 				<Slider defaultValue={[maxDistance]} onValueChange={handleSliderChange} max={20} min={1} step={1} />
 			</PopoverContent>
